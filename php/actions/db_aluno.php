@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     require_once "db_connect.php";
 
     if(isset($_POST['cadastrar'])){
@@ -8,15 +8,21 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $escola = $_POST['escola'];
-        $codigo_aluno = $_POST['codigo_aluno'];
+        $codigo_aluno = uniqid(rand());
 
-        $sql = "INSERT INTO aluno VALUES (null, '{$nome}', '$data_nascimento', '$email', '$senha', '$escola', '$codigo_aluno')";
+        $sql = "INSERT INTO usuario VALUES (null, '{$nome}', '$data_nascimento', '$email', '$senha', '$escola', '$codigo_aluno')";
 
-        $_SESSION['nome_aluno'] = $_POST['nome'];
 
-        mysqli_query($connect, $sql);
-    //    echo "$sql";
-     header("Location: ../../index.php");
+    if (mysqli_query($connect, $sql)==true) {
+      $_SESSION['status_cadastro'] = true;
+      $_SESSION['nome_aluno'] = $_POST['nome'];
+
+    }
+
+
+
+echo "$sql";
+  header("Location: ../../index.php");
     }
 
 

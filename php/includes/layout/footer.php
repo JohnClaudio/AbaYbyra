@@ -1,5 +1,5 @@
-<footer id="footer" class="container-fluid p-0 m-0 d-flex flex-column align-items-center justify-content-center">
-    <img id = "footer-background" src="./images/global/footer/ footer-img.png" alt="footer-background">
+<footer id="footer" class="bg-success text-white container-fluid p-0 m-0 d-flex flex-column align-items-center justify-content-center">
+
     <div id="footer-content" class="w-50 pt-3 container-fluid">
       <div class="social-container container w-100 d-flex justify-content-between">
         <a href="">

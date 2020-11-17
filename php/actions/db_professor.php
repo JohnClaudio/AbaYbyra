@@ -7,16 +7,16 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $escola = $_POST['escola'];
-        $codigo_professor = $_POST['codigo_professor'];
+        $telefone = $_POST['telefone'];
 
-        $sql = "INSERT INTO professor VALUES (null,'$nome', '$email', '$senha', '$escola', '$codigo_professor');";
+        $sql = "INSERT INTO professor VALUES (null,'$nome', '$email', '$senha', '$escola', '$telefone');";
 
         mysqli_query($connect, $sql);
 
         header("Location: ../../index.php");
     }
 
-   
+
 
 
 ?>

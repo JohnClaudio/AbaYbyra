@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <?php require_once('./php/includes/links-header.php');?>
-
-    <title>Aba Ybyra</title>
-</head>
-
-<body>
-    <?php require_once("./php/includes/header.php");?>
+<?php /*CÓDIGO DO FORMULÁRIO (body) DA PÁGINA PROFESSOR*/ ?>
 
 <main>
-  <div class="container">
+  <div class="mt-2 container">
       <div class="row">
       <div class="col-5 mx-auto pt-5">
       <h3 class="mb-5">Cadastro do Professor</h3>
-<form method="POST" action="./actions/db_professor.php">
+      <form method="POST" action="./actions/db_professor.php">
       <div class="form-group">
       <label class="label-form" for="nome">Nome:</label>
       <input type="text" class="form-control" name="nome" id="nome" onkeyup="valida_campos()">
@@ -42,10 +32,3 @@
       </div>
       </div>
 </main>
-
-
-<?php
-
-  require_once("./php/includes/links-body.php");
-?>
-</html>

@@ -6,16 +6,21 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        $nome_responsavel = $_POST['nome_resp'];
+        $telefone = $_POST['telefone'];
         $endereco = $_POST['endereco'];
-        $codigo_aluno = $_POST['codigo_aluno'];
-        $codigo_professor = $_POST['codigo_professor'];
+    //    $codigo_aluno = $_POST['codigo_aluno'];
+    //    $codigo_professor = $_POST['tefone'];
 
-        $sql = "INSERT INTO escola VALUES (null,'$nome', '$email', '$senha', '$nome_responsavel', '$endereco', '$codigo_aluno', '$codigo_professor');";
+        $sql = "INSERT INTO escola VALUES (null,'$nome', '$email', '$senha', '$nome_responsavel', '$endereco', '$telefone');";
 
-        mysqli_query($connect, $sql);
-    echo "$sql";
-      //  header("Location: ../../index.php");
+        if (mysqli_query($connect, $sql)==true) {
+          $_SESSION['status_cadastro'] = true;
+        //  $_SESSION['nome_aluno'] = $_POST['nome'];
+
+        }
+    //    mysqli_query($connect, $sql);
+      //  echo "$sql";
+        header("Location: ../../index.php");
     }
 
 
