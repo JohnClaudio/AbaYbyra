@@ -20,9 +20,16 @@
               <div class="dropdown-menu">
                 <a class="text-center dropdown-item text-success" href="./view/perfil/profile.php">Meus Dados</a>
                 <a class="text-center dropdown-item text-success " href="./view/perfil/aluno_area.php">Área do aluno</a>
-               <?php if(isset($_SESSION['autenticado_escola'])): ?><a class=" text-center dropdown-item text-success " href="#">Área da escola</a> <?php endif; ?>
+
+               <?php if(isset($_SESSION['autenticado_escola'])): ?>
+                 <a class="text-center dropdown-item text-success " href="./view/perfil/escola_add.php">Adicionar Professor</a>
+                  <a class="text-center dropdown-item text-success " href="./view/perfil/escola_professor.php">Lista Professores</a>
+               <?php endif; ?>
+
+
                 <div class="dropdown-divider text-success"></div>
-                <a href="./php/logout.php" class="dropdown-item  text-center text-danger header-icon nav-item nav-link"><strong>logout</strong></a>
+                <a href="./php/actions/perfil/logout.php" class="dropdown-item  text-center text-danger header-icon nav-item nav-link"><strong>logout</strong></a>
+
               </div>
             </div>
 
