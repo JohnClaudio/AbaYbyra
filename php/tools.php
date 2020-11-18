@@ -17,7 +17,7 @@ function montar_layout($value){
 function validar_login()
 {
   if (!isset($_SESSION['nome'])) {
-  	header('Location: index.php');
+  	header('Location: ../../index.php');
   }
 
 }
